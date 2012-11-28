@@ -6,60 +6,52 @@
 //
 //
 
+#include <iomanip>
+#include <ios>
 #include <iostream>
 #include <string>
 
-// say what standard library names we use
-using std::cin;     using std::endl;
-using std::cout;    using std::string;
+using std::cin;         using std::setprecision;
+using std::cout;        using std::string;
+using std::endl;        using std::streamsize;
 
 int main()
 {
-    // ask for the person's name
+    // ask for and read the student's name
     cout << "Please enter your first name: ";
-    
-    // read the name
     string name;
     cin >> name;
+    cout << "Hello, " << name << "!" << endl;
     
-    // build the message
-    const string greeting = "Hello, " + name + "!";
+    // ask for and read the midterm and final grades
+    cout << "Please enter your midterm and final exam grades: ";
+    double midterm, final;
+    cin >> midterm >> final;
     
-    // the number of blanks around the greeting
-    const int hpad = 5;
-    const int vpad = 1;
+    // ask for the homework grades
+    cout << "Enter all of your homework grades, "
+        "followed by end-of-file: ";
     
-    // the number of rows and columns to write
-    const int rows = vpad * 2 + 3;
-    const string::size_type cols = greeting.size() + hpad * 2 + 2;
+    // the number and sm of grades read so far
+    int count = 0;
+    double sum = 0;
     
-    // wrtie a blank line to separate the output from the input
-    cout << endl;
+    // a variable into whihc to read
+    double x;
     
-    // write rows rows of output
-    // invariant: we have written r rows so far
-    for (int r = 0; r < rows; r++) {
-        string::size_type c = 0;
-        
-        // invariant: we have written c chars so far in this row
-        while (c < cols) {
-            // is it time to write the greeting?
-            if (r == vpad + 1 && c == hpad + 1) {
-                cout << greeting;
-                c += greeting.size();
-            } else {
-                // are we on the border?
-                if (r == 0 || r == rows - 1 ||
-                    c == 0 || c == cols - 1) {
-                    cout << "*";
-                } else {
-                    cout << " ";
-                }
-                c++;
-            }
-        }
-        cout << endl;
+    // invariant:
+    // we have read count grades so far, and
+    // sum is the sum of the first count grades
+    while (cin >> x) {
+        ++count;
+        sum += x;
     }
+    
+    // write the result
+    streamsize prec = cout.precision();
+    cout << "Your final grade is " << setprecision(3)
+         << 0.2 * midterm * 0.4 * final + 0.4 * sum / count
+         << setprecision(prec) << endl;
+    
     return 0;
 }
-
