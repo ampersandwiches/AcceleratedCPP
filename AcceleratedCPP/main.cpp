@@ -26,11 +26,12 @@ int main()
     const string greeting = "Hello, " + name + "!";
     
     // the number of blanks around the greeting
-    const int pad = 1;
+    const int hpad = 5;
+    const int vpad = 1;
     
     // the number of rows and columns to write
-    const int rows = pad * 2 + 3;
-    const string::size_type cols = greeting.size() + pad * 2 + 2;
+    const int rows = vpad * 2 + 3;
+    const string::size_type cols = greeting.size() + hpad * 2 + 2;
     
     // wrtie a blank line to separate the output from the input
     cout << endl;
@@ -43,7 +44,7 @@ int main()
         // invariant: we have written c chars so far in this row
         while (c < cols) {
             // is it time to write the greeting?
-            if (r == pad + 1 && c == pad + 1) {
+            if (r == vpad + 1 && c == hpad + 1) {
                 cout << greeting;
                 c += greeting.size();
             } else {
