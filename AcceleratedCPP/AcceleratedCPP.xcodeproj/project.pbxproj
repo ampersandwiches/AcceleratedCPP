@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CFB9D49F166B01BE00D3E01F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CFB9D49E166B01BE00D3E01F /* main.cpp */; };
 		CFB9D4A1166B01BE00D3E01F /* AcceleratedCPP.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = CFB9D4A0166B01BE00D3E01F /* AcceleratedCPP.1 */; };
+		CFB9D4BC166B0D5000D3E01F /* grade.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CFB9D4B6166B0D4900D3E01F /* grade.cpp */; };
+		CFB9D4BD166B0D5000D3E01F /* median.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CFB9D4B8166B0D4900D3E01F /* median.cpp */; };
+		CFB9D4BE166B0D5000D3E01F /* Student_info.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CFB9D4BA166B0D4900D3E01F /* Student_info.cpp */; };
+		CFB9D4C0166B0D6500D3E01F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CFB9D4BF166B0D6500D3E01F /* main.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,8 +29,14 @@
 
 /* Begin PBXFileReference section */
 		CFB9D49A166B01BE00D3E01F /* AcceleratedCPP */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AcceleratedCPP; sourceTree = BUILT_PRODUCTS_DIR; };
-		CFB9D49E166B01BE00D3E01F /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		CFB9D4A0166B01BE00D3E01F /* AcceleratedCPP.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = AcceleratedCPP.1; sourceTree = "<group>"; };
+		CFB9D4B6166B0D4900D3E01F /* grade.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = grade.cpp; sourceTree = "<group>"; };
+		CFB9D4B7166B0D4900D3E01F /* grade.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = grade.h; sourceTree = "<group>"; };
+		CFB9D4B8166B0D4900D3E01F /* median.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = median.cpp; sourceTree = "<group>"; };
+		CFB9D4B9166B0D4900D3E01F /* median.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = median.h; sourceTree = "<group>"; };
+		CFB9D4BA166B0D4900D3E01F /* Student_info.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Student_info.cpp; sourceTree = "<group>"; };
+		CFB9D4BB166B0D4900D3E01F /* Student_info.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Student_info.h; sourceTree = "<group>"; };
+		CFB9D4BF166B0D6500D3E01F /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +69,14 @@
 		CFB9D49D166B01BE00D3E01F /* AcceleratedCPP */ = {
 			isa = PBXGroup;
 			children = (
-				CFB9D49E166B01BE00D3E01F /* main.cpp */,
 				CFB9D4A0166B01BE00D3E01F /* AcceleratedCPP.1 */,
+				CFB9D4B7166B0D4900D3E01F /* grade.h */,
+				CFB9D4B6166B0D4900D3E01F /* grade.cpp */,
+				CFB9D4B9166B0D4900D3E01F /* median.h */,
+				CFB9D4B8166B0D4900D3E01F /* median.cpp */,
+				CFB9D4BB166B0D4900D3E01F /* Student_info.h */,
+				CFB9D4BA166B0D4900D3E01F /* Student_info.cpp */,
+				CFB9D4BF166B0D6500D3E01F /* main.cpp */,
 			);
 			path = AcceleratedCPP;
 			sourceTree = "<group>";
@@ -117,7 +132,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CFB9D49F166B01BE00D3E01F /* main.cpp in Sources */,
+				CFB9D4BC166B0D5000D3E01F /* grade.cpp in Sources */,
+				CFB9D4BD166B0D5000D3E01F /* median.cpp in Sources */,
+				CFB9D4BE166B0D5000D3E01F /* Student_info.cpp in Sources */,
+				CFB9D4C0166B0D6500D3E01F /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,6 +226,7 @@
 				CFB9D4A6166B01BE00D3E01F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
