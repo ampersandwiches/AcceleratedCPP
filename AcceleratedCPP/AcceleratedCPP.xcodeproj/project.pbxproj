@@ -69,7 +69,6 @@
 		CFB9D49D166B01BE00D3E01F /* AcceleratedCPP */ = {
 			isa = PBXGroup;
 			children = (
-				CFB9D4C5166C36E000D3E01F /* 4-2 */,
 				CFB9D4C4166C36D000D3E01F /* Chapter 4 */,
 				CFB9D4A0166B01BE00D3E01F /* AcceleratedCPP.1 */,
 			);
@@ -88,13 +87,6 @@
 				CFB9D4BF166B0D6500D3E01F /* main.cpp */,
 			);
 			name = "Chapter 4";
-			sourceTree = "<group>";
-		};
-		CFB9D4C5166C36E000D3E01F /* 4-2 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "4-2";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

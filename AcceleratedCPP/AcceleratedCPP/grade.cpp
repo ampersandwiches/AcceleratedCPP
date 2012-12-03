@@ -1,10 +1,13 @@
 #include <stdexcept>
 #include <vector>
+#include <list>
 #include "grade.h"
 #include "median.h"
 #include "Student_info.h"
 
-using std::domain_error;  using std::vector;
+using std::domain_error;	using std::vector;
+using std::cin;				using std::cout;
+using std::endl;			using std::list;
 
 // compute a student's overall grade from midterm and final exam grades and homework grade
 double grade(double midterm, double final, double homework)
@@ -32,19 +35,19 @@ bool fgrade(const Student_info& s)
 	return grade(s) < 60;
 }
 
-vector<Student_info> extract_fails(std::__1::vector<Student_info>& students)
+list<Student_info> extract_fails(list<Student_info>& students)
 {
-	vector<Student_info> fail;
-	vector<Student_info>::size_type i = 0;
-	
-	while (i != students.size())
+	list<Student_info> fail;
+	list<Student_info>::iterator iter = students.begin();
+	while (iter != students.end())
 	{
-		if (fgrade(students[i]))
+		if (fgrade(*iter))
 		{
-			fail.push_back(students[i]);
-			students.erase(students.begin() + i);
-		} else
-			++i;
+			fail.push_back(*iter);
+			iter = students.erase(iter);
+		}
+		else
+			++iter;
 	}
 	return fail;
 }
