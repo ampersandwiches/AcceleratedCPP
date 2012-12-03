@@ -27,3 +27,24 @@ double grade(const Student_info& s)
 	return grade(s.midterm, s.final, s.homework);
 }
 
+bool fgrade(const Student_info& s)
+{
+	return grade(s) < 60;
+}
+
+vector<Student_info> extract_fails(std::__1::vector<Student_info>& students)
+{
+	vector<Student_info> fail;
+	vector<Student_info>::size_type i = 0;
+	
+	while (i != students.size())
+	{
+		if (fgrade(students[i]))
+		{
+			fail.push_back(students[i]);
+			students.erase(students.begin() + i);
+		} else
+			++i;
+	}
+	return fail;
+}

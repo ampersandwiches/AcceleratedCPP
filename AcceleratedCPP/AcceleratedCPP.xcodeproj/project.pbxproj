@@ -69,7 +69,16 @@
 		CFB9D49D166B01BE00D3E01F /* AcceleratedCPP */ = {
 			isa = PBXGroup;
 			children = (
+				CFB9D4C5166C36E000D3E01F /* 4-2 */,
+				CFB9D4C4166C36D000D3E01F /* Chapter 4 */,
 				CFB9D4A0166B01BE00D3E01F /* AcceleratedCPP.1 */,
+			);
+			path = AcceleratedCPP;
+			sourceTree = "<group>";
+		};
+		CFB9D4C4166C36D000D3E01F /* Chapter 4 */ = {
+			isa = PBXGroup;
+			children = (
 				CFB9D4B7166B0D4900D3E01F /* grade.h */,
 				CFB9D4B6166B0D4900D3E01F /* grade.cpp */,
 				CFB9D4B9166B0D4900D3E01F /* median.h */,
@@ -78,7 +87,14 @@
 				CFB9D4BA166B0D4900D3E01F /* Student_info.cpp */,
 				CFB9D4BF166B0D6500D3E01F /* main.cpp */,
 			);
-			path = AcceleratedCPP;
+			name = "Chapter 4";
+			sourceTree = "<group>";
+		};
+		CFB9D4C5166C36E000D3E01F /* 4-2 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "4-2";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
