@@ -1,2 +1,19 @@
+<<<<<<< HEAD
 *xcuserdata
 *xcuserstate
+*xcworkspacedata
+=======
+# Compiled Object files
+*.slo
+*.lo
+*.o
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+>>>>>>> 99ad54b7555c986d26e5e8c4316b4b20d216ca91
